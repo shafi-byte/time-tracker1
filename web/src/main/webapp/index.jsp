@@ -13,7 +13,7 @@
 <body>
   <h1>Super Simple Example Web Page</h1>
   <p>
-    This is a very simple example web page on a JSP.
+    <h3 style="color: blue,font-family:verdana,font-size: 200%">This is a very simple example web page on a JSP<h3>.
   </p>
 </body>
 </html>
