@@ -39,6 +39,6 @@ public class Tracker {
             // whatever
         }
 
-        return entries.get(index1);
+        return entries.get(index);
     }
 }
