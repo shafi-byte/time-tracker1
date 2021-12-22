@@ -23,6 +23,7 @@ public class Tracker {
     }
 
     public int size() {
+        printf(hii);
         return entries.size();
     }
 
