@@ -1,6 +1,2 @@
-# time-tracker
-Java (Maven) application for tracking time on the job
+# ca-cng-datascience-lates-flows
 
-Time tracker
-
-Good night Students!!!

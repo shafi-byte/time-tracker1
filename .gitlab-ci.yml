@@ -1,0 +1,54 @@
+variables:
+  AWS_ROLE: "ca_cng_jenkins"
+  AWS_ACCOUNT_ID_SHD: "147860743096"
+  STATEKEY: "datascience-lates-flows/terraform.tfstate"
+  aws_region: "eu-central-1"
+
+  # CACHE_PATH: "/home/gitlab-runner/cache/commercial/dynamic-margin/${CI_PROJECT_DIR}"
+  GIT_CLEAN_FLAGS: -n ${CI_PROJECT_DIR}/**
+
+
+stages:
+  - terraform:init
+  - terraform:plan
+  - terraform:deploy
+
+init:
+  stage: terraform:init
+  variables:
+    aws_account_id: "245443655115"
+    backend_role_dev: "arn:aws:iam::${aws_account_id}:role/sagemaker-latesflow-role"
+    statefile_bucket_dev: "ca-cng-dev-datascience-terraform"
+    statelocktable_dev: "ca_cng_datascience_latesflow_dynamoDB"
+    environment: "dev"
+
+  tags:
+    - dynamic-wow-non-prd
+  script:
+    - rm -rf .terraform
+    - terraform init --force-copy -backend-config=role_arn=$backend_role_dev -backend-config="bucket=$statefile_bucket_dev" -backend-config="dynamodb_table=$statelocktable_dev" -backend-config="key=$STATEKEY" -backend-config="region=$aws_region"
+    - terraform workspace select "$environment" || terraform workspace new "$environment"
+    - export TF_VAR_environment=$environment 
+
+    - terraform plan
+    - terraform apply -auto-approve
+  when: always
+
+# plan:
+#   stage: terraform:plan
+#   tags:
+#     - dynamic-wow-non-prd
+#   script:
+#     - terraform plan 
+#   when: always
+
+# deploy:
+#   stage: terraform:deploy
+#   tags:
+#     - dynamic-wow-non-prd
+#   script:
+    
+  # when: manual
+
+
+

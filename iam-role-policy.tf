@@ -1,5 +1,5 @@
 resource "aws_iam_role" "sagemaker_role" {
-  name = "terraform-sagemaker"
+  name = "ca-cng-dev-datascience-latesflow-role"
   path = "/"
   assume_role_policy = "${data.aws_iam_policy_document.assume_role.json}"
 }
@@ -14,8 +14,8 @@ data "aws_iam_policy_document" "assume_role" {
   }
 }
 
-resource "aws_iam_policy" "sagemaker_role" {
-  name = "terraform-sagemaker"
+resource "aws_iam_policy" "sagemaker_policy" {
+  name = "ca-cng-dev-datascience-latesflow-role"
   description = "Allow Sagemaker to create model"
   policy = "${data.aws_iam_policy_document.sagemaker_policy.json}"
 }
@@ -24,7 +24,8 @@ data "aws_iam_policy_document" "sagemaker_policy" {
   statement {
     effect = "Allow"
     actions = [
-      "sagemaker:*"
+      "sagemaker:*",
+      "s3:*"
     ]
     resources = [
       "*"
