@@ -1,0 +1,40 @@
+resource "aws_iam_role" "sagemaker_role" {
+  name = "ca-cng-dev-datascience-latesflow-role"
+  path = "/"
+  assume_role_policy = "${data.aws_iam_policy_document.assume_role.json}"
+}
+
+data "aws_iam_policy_document" "assume_role" {
+  statement {
+    actions = [ "sts:AssumeRole" ]
+    principals {
+      type = "Service"
+      identifiers = [ "sagemaker.amazonaws.com" ]
+    }
+  }
+}
+
+resource "aws_iam_policy" "sagemaker_policy" {
+  name = "ca-cng-dev-datascience-latesflow-role"
+  description = "Allow Sagemaker to create model"
+  policy = "${data.aws_iam_policy_document.sagemaker_policy.json}"
+}
+
+data "aws_iam_policy_document" "sagemaker_policy" {
+  statement {
+    effect = "Allow"
+    actions = [
+      "sagemaker:*",
+      "s3:*"
+    ]
+    resources = [
+      "*"
+    ]
+  }
+  }
+  
+
+resource "aws_iam_role_policy_attachment" "sagemaker_attachment" {
+  role = "${aws_iam_role.sagemaker_role.name}"
+  policy_arn = "${aws_iam_policy.sagemaker_policy.arn}"
+}
