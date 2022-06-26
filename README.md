@@ -2,5 +2,6 @@
 Java (Maven) application for tracking time on the job
 
 Time tracker
+Hello Community !!
 
 Good Night Students!!!
