@@ -23,7 +23,7 @@ pipeline {
             steps {
               rtServer (
                id: "Artifactory",
-               url: 'https://javalearners.jfrog.io/artifactory'
+               url: 'https://javalearners.jfrog.io/artifactory',
                username: 'jfroguser',
                password: 'Jfrog@12345',
                bypassProxy: true,
