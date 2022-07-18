@@ -22,7 +22,7 @@ pipeline {
         stage('Server') {
             steps {
               rtServer {
-               serverId: 'Artifactory',
+               id: "Artifactory",
                url: 'https://javalearners.jfrog.io/artifactory'
                username: 'jfroguser',
                password: 'Jfrog@12345',
