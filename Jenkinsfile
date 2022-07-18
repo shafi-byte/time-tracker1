@@ -21,20 +21,20 @@ pipeline {
         }
         stage('Server') {
             steps {
-              rtServer {
-               //id:"Artifactory",
+              rtServer (
+               id: "Artifactory",
                url: 'https://javalearners.jfrog.io/artifactory'
                username: 'jfroguser',
                password: 'Jfrog@12345',
                bypassProxy: true,
                timeout: 300
-              }
+              )
             }
         }
       
       stage('upload artifactory') {
             steps {
-              rtUpload {
+              rtUpload (
                serverId: "Artifactory",
                  spec: '''{
                         "files": [
@@ -44,14 +44,14 @@ pipeline {
                             }
                          ]
                  }'''
-              }
+              )
             }
         }
       stage('publish build info') {
             steps {
-              rtPublishBuildInfo {
+              rtPublishBuildInfo (
                      serverId: 'Artifactory'
-                 }
+                 )
               }
         }
     }
