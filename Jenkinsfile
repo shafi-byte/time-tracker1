@@ -32,7 +32,7 @@ pipeline {
                id: "Artifactory",
                url: 'https://javalearners.jfrog.io/artifactory',
               username: '<jfrog_user_username>',
-               password: '<jfrog_user_username>',
+               password: '<jfrog_user_pasword>',
                bypassProxy: true,
                timeout: 300
               )
