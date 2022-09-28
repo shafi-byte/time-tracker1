@@ -1,0 +1,19 @@
+Here is the list of commands that I typically use or at least encounter:
+
+git init
+git clone
+git branch
+git checkout
+git status
+git fetch
+git pull
+git add
+git commit
+git push
+git remote
+git merge
+git log
+git stash
+git reset
+git config
+
