@@ -10,7 +10,7 @@ Step 2: This will copy the repository into your local machine.
 
 Step 3: cd into the Repository.
 
-Step 4: Run the command "mvn clean package" which converts the code into machine level language and builds the code.\
+Step 4: Run the command "mvn clean package" which converts the code into machine level language and builds the code.
  
 Step 5: The code is succesfully build by maven. 
 
