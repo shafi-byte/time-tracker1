@@ -1,0 +1,325 @@
+"use strict";
+(self.webpackChunksonarsourcecom = self.webpackChunksonarsourcecom || []).push([[771], {
+    94738: function(e, n, t) {
+        t.d(n, {
+            ZP: function() {
+                return g
+            }
+        });
+        var o = t(55319)
+          , r = t(67294)
+          , a = t(1277)
+          , c = t(47319)
+          , l = t(35944)
+          , i = function(e) {
+            return e.block
+        };
+        var p = [{
+            type: "secondary_hero_block",
+            component: c.TX
+        }, {
+            type: "logo_block",
+            component: c.aE
+        }, {
+            type: "n5050_block",
+            component: c.LA
+        }, {
+            type: "column_block",
+            component: c.yr,
+            transformProps: function(e) {
+                return {
+                    elements: e.block.elements
+                }
+            }
+        }, {
+            type: "article_post",
+            component: c.qr,
+            transformProps: function(e) {
+                return {
+                    elements: e.block.elements
+                }
+            }
+        }, {
+            type: "pricing",
+            component: c.nc
+        }, {
+            type: "accordion",
+            component: c.UQ
+        }, {
+            type: "testimonial_block",
+            component: c.NS
+        }, {
+            type: "cards_block",
+            component: c.$g
+        }, {
+            type: "image_column_block",
+            component: c.ZI
+        }, {
+            type: "language_grid_block",
+            component: c._g
+        }, {
+            type: "cta_block",
+            component: c.el,
+            transformProps: function(e) {
+                return {
+                    elements: e.block.elements
+                }
+            }
+        }, {
+            type: "statbar_block",
+            component: c.L9
+        }, {
+            type: "newsletter_form",
+            component: c.Es.NewsletterForm
+        }, {
+            type: "secondary_navigation",
+            component: c.Rx,
+            transformProps: function(e) {
+                return {
+                    block: e.block,
+                    pageContext: e.pageContext
+                }
+            }
+        }, {
+            type: "carousel_section",
+            component: c.Rf
+        }, {
+            type: "paginated_section",
+            component: c.yM,
+            transformProps: function(e) {
+                var n = e.pageContext;
+                return Object.assign({}, n)
+            }
+        }, {
+            type: "hero_block_article_detail_1",
+            component: c.qf,
+            transformProps: function(e) {
+                var n = e.block
+                  , t = e.creation_date;
+                return Object.assign({}, n, {
+                    creationDate: null == t ? void 0 : t.value
+                })
+            }
+        }, {
+            type: "hero_block_article_detail_2",
+            component: c.Gl,
+            transformProps: function(e) {
+                var n, t = e.block, o = e.creation_date, r = e.building_blocks;
+                return Object.assign({}, t, {
+                    creationDate: null == o ? void 0 : o.value,
+                    relatedArticleContent: null === (n = r.value.find((function(e) {
+                        return "article_post" === e.system.type
+                    }
+                    ))) || void 0 === n ? void 0 : n.elements.article_content.value[0]
+                })
+            }
+        }, {
+            type: "hero_block_homepage",
+            component: c.XW,
+            transformProps: function(e) {
+                return {
+                    elements: e.block.elements
+                }
+            }
+        }, {
+            type: "hero_block_index",
+            component: c.aN,
+            transformProps: function(e) {
+                var n = e.block;
+                return {
+                    pageContext: e.pageContext,
+                    elements: n.elements
+                }
+            }
+        }, {
+            type: "industry_logo_block",
+            component: c.iH
+        }, {
+            type: "contact_form",
+            component: c.Es.ContactForm
+        }, {
+            type: "opensource_solutions",
+            component: c.dA
+        }, {
+            type: "vulnerability_disclosure_table",
+            component: c.nh
+        }, {
+            type: "timeline_block",
+            component: c.YD,
+            transformProps: function(e) {
+                var n, t = e.block;
+                return Object.assign({}, t, {
+                    id: null == t || null === (n = t.system) || void 0 === n ? void 0 : n.id
+                })
+            }
+        }, {
+            type: "post_grid_block",
+            component: c.CJ,
+            transformProps: function(e) {
+                var n = e.pageContext
+                  , t = e.data;
+                return {
+                    pageInfo: t.allKontentItemGenericPostPage.pageInfo,
+                    paginationBaseURL: n.paginationBaseURL,
+                    posts: t.allKontentItemGenericPostPage.nodes
+                }
+            }
+        }, {
+            type: "editions_contact_form",
+            component: c.Es.EditionsContactForm
+        }, {
+            type: "tabbed_block",
+            component: c.Sq,
+            transformProps: function(e) {
+                return {
+                    elements: e.block.elements
+                }
+            }
+        }, {
+            type: "tertiary_navigation",
+            component: c.$Z
+        }, {
+            type: "iframe",
+            component: c.hv
+        }, {
+            type: "login_section",
+            component: c.wX
+        }, {
+            type: "editions_download_block",
+            component: c.VH
+        }, {
+            type: "lts_download_container",
+            component: c.bc
+        }, {
+            type: "mid_page_cta",
+            component: c.oL
+        }, {
+            type: "modal",
+            component: c.u_
+        }, {
+            type: "search_block",
+            component: c.w2
+        }, {
+            type: "n5050_card_block",
+            component: c.RK
+        }]
+          , s = t(47834)
+          , u = t(75528)
+          , m = t(97812)
+          , d = t(87896)
+          , _ = function(e) {
+            (0,
+            r.useEffect)((function() {
+                e && (0,
+                d.navigate)(e)
+            }
+            ), [e])
+        }
+          , f = t(2677)
+          , b = t(62581);
+        var y = (0,
+        o.Z)("div", {
+            target: "ev4uova1"
+        })({
+            name: "8atqhb",
+            styles: "width:100%;"
+        })
+          , v = (0,
+        o.Z)("main", {
+            target: "ev4uova0"
+        })("padding-top:80px; ", (function(e) {
+            return e.isInfoStripePresent && {
+                "@media (min-width: 1120px)": {
+                    paddingTop: "120px"
+                }
+            }
+        }
+        ), " ", (function(e) {
+            return !e.hasStickyHeader && {
+                "@media (min-width: 500px)": {
+                    paddingTop: "0px"
+                }
+            }
+        }
+        ), ";")
+          , g = function(e) {
+            var n, t, o, d = e.children, g = e.elements, k = e.pageContext, h = e.data, P = e.hasHeader, x = void 0 === P || P, Z = e.hasFooter, C = void 0 === Z || Z, w = (0,
+            r.useContext)(b.ZP).hasStickyHeader, I = !(null === (n = (0,
+            u.Z)().information_stripe.value) || void 0 === n || !n.length), H = g.automatic_download_asset, S = g.automatic_download_asset_url, j = g.building_blocks, E = g.creation_date;
+            return _((null == H || null === (t = H.value) || void 0 === t || null === (o = t[0]) || void 0 === o ? void 0 : o.url) || (null == S ? void 0 : S.value)),
+            (0,
+            f.Z)(),
+            (0,
+            l.tZ)(l.HY, {
+                children: (0,
+                l.BX)(s.n, {
+                    children: [(0,
+                    l.tZ)(a.Ix, {
+                        position: "top-center",
+                        autoClose: 6e3,
+                        theme: "colored",
+                        icon: !1
+                    }), x && (0,
+                    l.tZ)(c.h4, {}), (0,
+                    l.tZ)(v, {
+                        isInfoStripePresent: I,
+                        hasStickyHeader: w,
+                        children: (0,
+                        l.BX)(y, {
+                            children: [j.value.map((function(e) {
+                                return function(e) {
+                                    var n, t, o, r, a = null === (n = e.block) || void 0 === n || null === (t = n.system) || void 0 === t ? void 0 : t.type, c = null === (o = e.block) || void 0 === o || null === (r = o.system) || void 0 === r ? void 0 : r.id;
+                                    if (!a || !c)
+                                        return null;
+                                    var s = p.find((function(e) {
+                                        return e.type === a
+                                    }
+                                    ))
+                                      , u = null == s ? void 0 : s.component
+                                      , m = (null == s ? void 0 : s.transformProps) || i;
+                                    return s ? (0,
+                                    l.tZ)(u, Object.assign({}, m(e)), c) : null
+                                }({
+                                    block: e,
+                                    pageContext: k,
+                                    creation_date: E,
+                                    building_blocks: j,
+                                    data: h
+                                })
+                            }
+                            )), d]
+                        })
+                    }), C && (0,
+                    l.tZ)(m.Z, {})]
+                })
+            })
+        }
+    },
+    45753: function(e, n, t) {
+        t.r(n),
+        t.d(n, {
+            Head: function() {
+                return c
+            }
+        });
+        var o = t(94738)
+          , r = t(64139)
+          , a = t(35944)
+          , c = function(e) {
+            var n = e.data;
+            return (0,
+            a.tZ)(r.Z, Object.assign({}, n.allKontentItemGeneralPage.nodes[0].elements))
+        };
+        n.default = function(e) {
+            var n = e.data
+              , t = e.pageContext
+              , r = n.allKontentItemGeneralPage.nodes[0].elements;
+            return (0,
+            a.tZ)(o.ZP, {
+                pageContext: t,
+                elements: r
+            })
+        }
+    }
+}]);
+//# sourceMappingURL=component---src-templates-general-page-template-tsx-1947f3972ea124271466.js.map
