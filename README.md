@@ -8,4 +8,4 @@ Time tracker
 
 Good Morning Students!!!
 
-**Poll SCM has been implemented**
+**Poll SCM has been implemented with 2mints**
