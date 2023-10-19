@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Define the Apache HTTP Server executable path. Change this if necessary.
+httpd_path="/usr/sbin/httpd"
+
+# Define the Apache configuration file path. Change this if necessary.
+config_file="/etc/httpd/conf/httpd.conf"
+
+# Function to start Apache server
+start_server() {
+    if pgrep -f "$httpd_path -k start" > /dev/null; then
+        echo "Apache is already running."
+    else
+        $httpd_path -k start -f $config_file
+        echo "Apache started."
+    fi
+}
+
+# Function to stop Apache server
+stop_server() {
+    if pgrep -f "$httpd_path -k start" > /dev/null; then
+        $httpd_path -k stop -f $config_file
+        echo "Apache stopped."
+    else
+        echo "Apache is not running."
+    fi
+}
+
+# Function to check the status of Apache server
+status_server() {
+    if pgrep -f "$httpd_path -k start" > /dev/null; then
+        echo "Apache is running."
+    else
+        echo "Apache is not running."
+    fi
+}
+
+# Main script
+case "$1" in
+    start)
+        start_server
+        ;;
+    stop)
+        stop_server
+        ;;
+    restart)
+        stop_server
+        start_server
+        ;;
+    status)
+        status_server
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+esac
+
+exit 0
