@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: Jason
-  Date: 6/22/2015
+  Date: 6/29/2024
   Time: 8:47 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -9,11 +9,13 @@
 <html>
 <head>
     <title>Super Simple Example Webpage</title>
+    <title>Super Simple Example Webpage</title>
+	
 </head>
 <body>
-  <h1>Super Simple Example Web Page</h1>
+  <h1>Super Simple Example Web App Page</h1>
   <p>
-    This is a very simple example web page on a JSP.
+    This is a very simple example web page on a JSP .
   </p>
 </body>
 </html>
